@@ -12,10 +12,7 @@ module.exports = (event) => {
     console.log("Sent request to DialogFlow");
     apiaiSession.on('response', (response) => {
         console.log("Got response from DialogFlow");
-        const result = response.result.fulfillment.speech;
-        console.log(response.result.metadata.intentName);
-        console.log(response.result.parameters.email);
-        intentHandler(senderId, result);
+        intentHandler(senderId, response.result);
     });
     apiaiSession.on('error', (error) => {
         console.log("Error while connecting to DialogFlow");

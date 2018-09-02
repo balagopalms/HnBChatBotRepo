@@ -19,7 +19,7 @@ class Services {
 
     changeCommercePasswd (emailId) {
         request({
-            uri: 'https://88289eab.ngrok.io/changepwd',
+            uri: 'https://radiant-hollows-75895.herokuapp.com/changepwd',
             method: 'POST',
             body: {
                 email: { emailId }
