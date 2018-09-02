@@ -1,7 +1,7 @@
-const API_AI_TOKEN = '9d99887cd4654d7589bac0821204b449';
+const API_AI_TOKEN = 'ec4a634f004248bdb08bd20e0f0a8d4a';
 const apiAiClient = require('apiai')(API_AI_TOKEN);
 
-const FACEBOOK_ACCESS_TOKEN = 'EAAETHMOICOkBAKPLxZALMltjZCPB1ZCIBnSZAklvOtDqZBgxILbgWzKCtmAstsdTQSKzxce2vnfRDoxDkQuSlBZCmrSesbXv3fcOaeY0sGfnXz5wbWSswrwghqbsapNY3RujmAsPUd8JNeb2PoTO9W0NhZA4Ky2XTHChsb3jC7y20MZBG5917F2ZC0ntggUPlV7AZD';
+const FACEBOOK_ACCESS_TOKEN = 'EAAJpZCJzwtZAMBAARzK0S1BG1hpSEZCziqbcNDybgictya2tYNuhhe9ZB2GQd0gZBFECOdsnC4q75DlGAIj059d6EVRWEjE5Afeiu2kxg8NmHdawkTqE5xQ9BZB32zcBCdelwKqg3eELfuwqPm6c7AQh8SRAqFZCZCVJLxT8unY5xiDKVsQVwKyBKbdUKlLNveYZD';
 const request = require('request');
 
 const sendTextMessage = (senderId, text) => {
