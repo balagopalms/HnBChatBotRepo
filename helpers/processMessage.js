@@ -43,6 +43,7 @@ module.exports = (event) => {
                 response.result.metadata.intentName == 'PASSWORD_RESET - emailId'
                 && response.result.parameters.email ) {
             callCommerce(response.result.parameters.email);
+            console.log("Called change password service");
         }
         sendTextMessage(senderId, result);
     });
