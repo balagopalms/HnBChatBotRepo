@@ -1,0 +1,27 @@
+{
+  "name": "fbchatbot",
+  "version": "1.0.0",
+  "description": "Webhooks for Facebook Chatbot",
+  "engines": {
+    "node": "8.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dk4software/fbchatbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dk4software/fbchatbot/issues"
+  },
+  "homepage": "https://github.com/dk4software/fbchatbot#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
