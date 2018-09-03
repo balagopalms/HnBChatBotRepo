@@ -10,8 +10,10 @@ module.exports = (senderId, result) => {
 
         switch( result.metadata.intentName) {
             case 'PASSWORD_RESET - emailId':
-                handlers.handleChangePasswd(sendId, result);
+                handlers.handleChangePasswd(senderId, result);
                 break;
+            case 'POPULAR_PRODUCTS':
+                service.getProductsUnderCategory();
             default:
                 service.sendTextMessage(senderId, result.fulfillment.speech);
         }
