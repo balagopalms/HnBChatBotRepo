@@ -1,5 +1,7 @@
 const service = require('./serviceDeclaration');
-var PropertiesReader = require('properties-reader');
+const PropertiesReader = require('properties-reader');
+const templateMsgJSON = require('../jsonData/TemplateMsg.json');
+const carouselJSON = require('../jsonData/NBCarousel.json');
 var utf8 = require('utf8');
 
 class IntentHandlers {
@@ -19,10 +21,8 @@ class IntentHandlers {
 
 const showDealProducts = (response, senderId) => {
     console.log('Show Deal Products Method is called.');
-    var templateMsgJSON = require('../jsonData/TemplateMsg.json');
-    const carouselJSON = require('../jsonData/NBCarousel.json');
     templateMsgJSON.recipient.id = senderId;
-    templateMsgJSON = populateFbTemplate(response, templateMsgJSON, carouselJSON);
+    populateFbTemplate(response, templateMsgJSON, carouselJSON);
     service.sendTemplateMessage(senderId, templateMsgJSON);
 };
 
