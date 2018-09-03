@@ -15,6 +15,12 @@ class Services {
                 message: { text },
             },
             json: true
+        }, function(err, res, body) {
+            if (res.statusCode != 200) {
+                console.log("Error: "+ err);
+                console.log("ResponseBody: "+ res.statusCode);
+                console.log("ResponseBody: "+ JSON.stringify(res.body));
+            }
         });
     }
 
@@ -27,9 +33,9 @@ class Services {
             json: true
         }, function(err, res, body) {
             if (res.statusCode != 200) {
-                console.log("FB Error: "+ err);
-                console.log("FB ResponseBody: "+ res.statusCode);
-                console.log("FB ResponseBody: "+ res.body);
+                console.log("Error: "+ err);
+                console.log("ResponseBody: "+ res.statusCode);
+                console.log("ResponseBody: "+ JSON.stringify(res.body));
             }
         });
     }
@@ -42,6 +48,12 @@ class Services {
                 email: { emailId }
             },
             json: true
+        }, function(err, res, body) {
+            if (res.statusCode != 200) {
+                console.log("Error: "+ err);
+                console.log("ResponseBody: "+ res.statusCode);
+                console.log("ResponseBody: "+ JSON.stringify(res.body));
+            }
         })
     }
 
@@ -54,6 +66,12 @@ class Services {
             },
             method: 'POST',		 
         }, function (err, res, body) {
+            if (res.statusCode != 200) {
+                console.log("Error: "+ err);
+                console.log("ResponseBody: "+ res.statusCode);
+                console.log("ResponseBody: "+ JSON.stringify(res.body));
+                return;
+            }
             console.log("got response from CT");
             var result = JSON.parse(body);
             callBackMethod(result, senderId);
