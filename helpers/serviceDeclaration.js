@@ -29,4 +29,4 @@ class Services {
     }
 }
 
-module.exports = new Services()
+module.exports = new Services();

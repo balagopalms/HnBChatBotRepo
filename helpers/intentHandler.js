@@ -1,18 +1,16 @@
 
 const service = require('./serviceDeclaration');
+const handlers = require('./intentHandlers');
 
 
 module.exports = (senderId, result) => {
 
-    if(result.metadata && result.metadata.intentName) {
+    if(result && result.metadata && result.metadata.intentName) {
         console.log("IntentName: " + result.metadata.intentName);
 
         switch( result.metadata.intentName) {
             case 'PASSWORD_RESET - emailId':
-                console.log("Email: " + result.parameters.email);
-                service.changeCommercePasswd(result.parameters.email);
-                console.log("Called change password service");
-                service.sendTextMessage(senderId, result.fulfillment.speech);
+                handlers.handleChangePasswd(sendId, result);
                 break;
             default:
                 service.sendTextMessage(senderId, result.fulfillment.speech);
