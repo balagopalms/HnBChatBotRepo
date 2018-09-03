@@ -18,6 +18,22 @@ class Services {
         });
     }
 
+    sendTemplateMessage(senderId, templateJson){
+        request({
+            url: 'https://graph.facebook.com/v2.6/me/messages',
+            qs: { access_token: FACEBOOK_ACCESS_TOKEN },
+            method: 'POST',
+            body:templateJson,
+            json: true
+        }, function(err, res, body) {
+            if (res.statusCode != 200) {
+                console.log("FB Error: "+err);
+                console.log("FB ResponseBody: "+res.statusCode);
+                console.log("FB ResponseBody: "+res.body);
+            }
+        });
+    }
+
     changeCommercePasswd (emailId) {
         request({
             uri: 'https://radiant-hollows-75895.herokuapp.com/changepwd',

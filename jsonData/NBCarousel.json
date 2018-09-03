@@ -1,0 +1,66 @@
+{
+  "recipient": {
+    "id": "?senderId"
+  },
+  "message": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "generic",
+        "elements": [
+          {
+            "title": "Welcome!",
+            "image_url": "https://images.hollandandbarrettimages.co.uk/productimages/HB/180/000651_A.png",
+            "subtitle": "We're good for you",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.hollandandbarrett.com/",
+              "webview_height_ratio": "tall"
+            },
+            "buttons": [
+              {
+                "type": "web_url",
+                "url": "https://www.hollandandbarrett.com/",
+                "title": "View Website"
+              }
+            ]
+          },
+          {
+            "title": "Welcome!",
+            "image_url": "https://images.hollandandbarrettimages.co.uk/productimages/HB/180/000519_A.png",
+            "subtitle": "We're good for you",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.hollandandbarrett.com/",
+              "webview_height_ratio": "tall"
+            },
+            "buttons": [
+              {
+                "type": "web_url",
+                "url": "https://www.hollandandbarrett.com/",
+                "title": "View Website"
+              }
+            ]
+          },
+          {
+            "title": "Welcome!",
+            "image_url": "https://images.hollandandbarrettimages.co.uk/productimages/HB/180/000642_A.png",
+            "subtitle": "We're good for you",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.hollandandbarrett.com/",
+              "webview_height_ratio": "tall"
+            },
+            "buttons": [
+              {
+                "type": "web_url",
+                "url": "https://www.hollandandbarrett.com/",
+                "title": "View Website"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -18,7 +18,10 @@ class IntentHandlers {
 }
 
 const showDealProducts = (response, senderId) => {
-    console.log('Show Deal Products Method is called. SenderId: ' + senderId);
+    console.log('Show Deal Products Method is called.');
+    var carouselJSON = JSON.parse(fs.readFileSync('jsonData/NBCarousel.json', 'utf8'));
+    carouselJSON.recipient.id = senderId;
+    service.sendTemplateMessage(senderId, carouselJSON);
 };
 
 module.exports = new IntentHandlers();
