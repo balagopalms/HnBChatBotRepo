@@ -26,11 +26,11 @@ const showDealProducts = (response, senderId) => {
 };
 
 function populateDealProductTemplate(response, carouselJSON) {
-    response.forEach(
+    /*response.forEach(
         function(product) {
             console.log("Product Name: " + product.name.en);
         }
-    );
+    );*/
 }
 
 module.exports = new IntentHandlers();
