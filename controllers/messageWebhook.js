@@ -1,9 +1,10 @@
 const processMessage = require('../helpers/processMessage');
 
 module.exports = (req, res) => {
-    console.log(req.body);
+    
     if(req.body.object == 'page') {
         req.body.entry.forEach(entry => {
+            console.log(entry.messaging);
             entry.messaging.forEach(event => {
                 if(event.message && event.message.text) {
                     processMessage(event);
