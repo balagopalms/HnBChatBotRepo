@@ -23,7 +23,6 @@ const showDealProducts = (response, senderId) => {
     const carouselJSON = require('../jsonData/NBCarousel.json');
     templateMsgJSON.recipient.id = senderId;
     populateFbTemplate(response, templateMsgJSON, carouselJSON);
-    console.log("templateMsgJSON: " + JSON.stringify(templateMsgJSON, null, 2));
     service.sendTemplateMessage(senderId, templateMsgJSON);
 };
 
