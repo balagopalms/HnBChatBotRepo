@@ -1,4 +1,6 @@
 const service = require('./serviceDeclaration');
+var PropertiesReader = require('properties-reader');
+var fs = require('fs');
 
 class IntentHandlers {
 
