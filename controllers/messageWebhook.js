@@ -1,7 +1,7 @@
 const processMessage = require('../helpers/processMessage');
 
 module.exports = (req, res) => {
-    console.log("Message: " + JSON.stringify(req, null, 2));
+    console.log("Message: " + JSON.stringify(JSON.parse(req), null, 2));
     if(req.body.object == 'page') {
         req.body.entry.forEach(entry => {
             entry.messaging.forEach(event => {
