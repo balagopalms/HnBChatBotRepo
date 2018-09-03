@@ -13,7 +13,7 @@ module.exports = (senderId, result) => {
                 handlers.handleChangePasswd(senderId, result);
                 break;
             case 'POPULAR_PRODUCTS':
-                service.getProductsUnderCategory();
+                handlers.handleShowDealProducts(senderId, result);
             default:
                 service.sendTextMessage(senderId, result.fulfillment.speech);
         }

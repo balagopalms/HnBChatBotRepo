@@ -29,10 +29,10 @@ class Services {
         })
     }
 
-    getProductsUnderCategory() {
+    getProductsUnderCategory(categoryId) {
         request({
             url: 'https://api.sphere.io/hnb-59/product-projections/search',
-            qs: {filter: 'categories.id: subtree("a148c0b0-9d86-448b-a9e5-0effa2b6499d")', limit:5},
+            qs: {filter: 'categories.id: subtree("' + categoryId +'")', limit:5},
             headers : {
                 Authorization : COMMERCETOOL_AUTH
             },
