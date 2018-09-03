@@ -21,12 +21,14 @@ class IntentHandlers {
 
 const showDealProducts = (response, senderId) => {
     console.log('Show Deal Products Method is called.');
-    templateMsgJSON.recipient.id = senderId;
-    populateFbTemplate(response, templateMsgJSON, carouselJSON);
-    service.sendTemplateMessage(senderId, templateMsgJSON);
+    var message = JSON.parse(JSON.stringify(templateMsgJSON));  //clone the object.
+    message.recipient.id = senderId;
+    populateFbTemplate(response, message);
+    service.sendTemplateMessage(senderId, message);
+    message = {};
 };
 
-function populateFbTemplate(response, templateMsgJSON, carouselJSON) {
+function populateFbTemplate(response, message) {
     response.results.forEach(
         product=>{
             var productJSON = JSON.parse(JSON.stringify(carouselJSON)); //clone the object.
@@ -51,11 +53,11 @@ function populateFbTemplate(response, templateMsgJSON, carouselJSON) {
                     productJSON.subtitle = priceAmount + priceCurrency;
                 }
             )
-            templateMsgJSON.message.attachment.payload.elements.push(productJSON);
+            message.message.attachment.payload.elements.push(productJSON);
         }
     );
     //console.log(JSON.stringify(templateMsgJSON, null, 2));
-    return templateMsgJSON;
+    //return message;
 }
 
 module.exports = new IntentHandlers();
