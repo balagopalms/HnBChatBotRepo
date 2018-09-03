@@ -27,9 +27,9 @@ class Services {
             json: true
         }, function(err, res, body) {
             if (res.statusCode != 200) {
-                console.log("FB Error: "+err);
-                console.log("FB ResponseBody: "+res.statusCode);
-                console.log("FB ResponseBody: "+res.body);
+                console.log("FB Error: "+ err);
+                console.log("FB ResponseBody: "+ res.statusCode);
+                console.log("FB ResponseBody: "+ res.body);
             }
         });
     }
@@ -55,7 +55,8 @@ class Services {
             method: 'POST',		 
         }, function (err, res, body) {
             console.log("got response from CT");
-            callBackMethod(body, senderId);
+            var result = JSON.parse(body);
+            callBackMethod(result, senderId);
         });
     }
 }
