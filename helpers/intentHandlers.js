@@ -35,8 +35,10 @@ function populateFbTemplate(response, message) {
             var productName = product.name.en;
             console.log("Product Name: " + productName);
             productJSON.title = productName;
-            var id = product.id;
-            productJSON.buttons[1].payload = utf8.encode(id);
+            var payload = {};
+            payload.id = product.id;
+            payload.action = 'add_to_cart';
+            productJSON.buttons[1].payload = JSON.stringify(payload);
             var masterVariant = product.masterVariant;
             masterVariant.images.forEach(
                 image => {

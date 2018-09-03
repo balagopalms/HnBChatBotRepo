@@ -1,4 +1,5 @@
 const processMessage = require('../helpers/processMessage');
+const processPostBack = require('../helpers/processPostBack');
 
 module.exports = (req, res) => {
     console.log("Request: " + JSON.stringify(req.body));
@@ -10,6 +11,7 @@ module.exports = (req, res) => {
                 }
                 if(event.postback) {
                     console.log("Postback Payload: " + JSON.stringify(event.postback.payload, null, 2))
+                    processPostBack(event);
                 }
             });
         });
