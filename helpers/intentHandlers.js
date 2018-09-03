@@ -11,8 +11,12 @@ class IntentHandlers {
 
     handleShowDealProducts(senderId, result) {
         console.log('Showing Deal Products..');
-        service.getProductsUnderCategory('a148c0b0-9d86-448b-a9e5-0effa2b6499d');
+        service.getProductsUnderCategory('a148c0b0-9d86-448b-a9e5-0effa2b6499d', senderId, showDealProducts);
     }
 }
+
+const showDealProducts = (response, senderId) => {
+    console.log('Show Deal Products Method is called. SenderId: ' + senderId);
+};
 
 module.exports = new IntentHandlers();

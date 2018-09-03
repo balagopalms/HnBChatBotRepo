@@ -29,7 +29,7 @@ class Services {
         })
     }
 
-    getProductsUnderCategory(categoryId) {
+    getProductsUnderCategory(categoryId, senderId, callBackMethod) {
         request({
             url: 'https://api.sphere.io/hnb-59/product-projections/search',
             qs: {filter: 'categories.id: subtree("' + categoryId +'")', limit:5},
@@ -38,7 +38,8 @@ class Services {
             },
             method: 'POST',		 
         }, function (err, res, body) {
-            console.log("got response from CT: " + body);	 	
+            console.log("got response from CT");
+            callBackMethod(body, senderId);
         });
     }
 }
