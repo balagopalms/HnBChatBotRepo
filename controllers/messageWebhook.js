@@ -8,6 +8,9 @@ module.exports = (req, res) => {
                 if(event.message && event.message.text) {
                     processMessage(event);
                 }
+                if(event.postback) {
+                    console.log("Postback Payload: " + JSON.stringify(event.postback.payload, null, 2))
+                }
             });
         });
         res.status(200).end();

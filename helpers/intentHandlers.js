@@ -1,6 +1,6 @@
 const service = require('./serviceDeclaration');
 var PropertiesReader = require('properties-reader');
-var fs = require('fs');
+var utf8 = require('utf8');
 
 class IntentHandlers {
 
@@ -22,7 +22,7 @@ const showDealProducts = (response, senderId) => {
     var templateMsgJSON = require('../jsonData/TemplateMsg.json');
     const carouselJSON = require('../jsonData/NBCarousel.json');
     templateMsgJSON.recipient.id = senderId;
-    populateFbTemplate(response, templateMsgJSON, carouselJSON);
+    templateMsgJSON = populateFbTemplate(response, templateMsgJSON, carouselJSON);
     service.sendTemplateMessage(senderId, templateMsgJSON);
 };
 
@@ -33,6 +33,8 @@ function populateFbTemplate(response, templateMsgJSON, carouselJSON) {
             var productName = product.name.en;
             console.log("Product Name: " + productName);
             productJSON.title = productName;
+            var id = product.id;
+            productJSON.buttons[1].payload = utf8.encode(id);
             var masterVariant = product.masterVariant;
             masterVariant.images.forEach(
                 image => {
@@ -51,8 +53,9 @@ function populateFbTemplate(response, templateMsgJSON, carouselJSON) {
             )
             templateMsgJSON.message.attachment.payload.elements.push(productJSON);
         }
-        
     );
+    //console.log(JSON.stringify(templateMsgJSON, null, 2));
+    return templateMsgJSON;
 }
 
 module.exports = new IntentHandlers();

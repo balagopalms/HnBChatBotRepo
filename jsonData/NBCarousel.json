@@ -12,6 +12,11 @@
       "type": "web_url",
       "url": "https://www.hollandandbarrett.com/",
       "title": "View Website"
+    },
+    {
+      "type": "postback",
+      "title": "Add to Cart",
+      "payload": "payload"
     }
   ]
 }

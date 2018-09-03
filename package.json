@@ -27,6 +27,7 @@
     "express": "^4.16.3",
     "fs": "0.0.1-security",
     "properties-reader": "0.0.16",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "utf8": "^3.0.0"
   }
 }
