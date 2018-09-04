@@ -11,7 +11,7 @@ module.exports = (event) => {
         console.log("Action: " + action);
         if(action) {
             switch(action) {
-                case config.postback-actions.ADD_TO_CART:
+                case config.postback_actions.ADD_TO_CART:
                     handlers.handleAddToCart(event.sender.id, payload);
                     break;
                 default:

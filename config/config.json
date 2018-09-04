@@ -17,7 +17,7 @@
         "PASSWORD_RESET": "PASSWORD_RESET - emailId",
         "CATEGORY_CAROUSEL": "POPULAR_PRODUCTS"
     },
-    "postback-actions" : {
+    "postback_actions" : {
         "ADD_TO_CART": "add_to_cart"
     },
     "product-categories": {
