@@ -38,7 +38,7 @@ function populateFbTemplate(response, message) {
             productJSON.title = productName;
             var payload = {};
             payload.id = product.id;
-            payload.action = config.postback-actions.ADD_TO_CART;
+            payload.action = config.postback_actions.ADD_TO_CART;
             var masterVariant = product.masterVariant;
             var variantId = masterVariant.id;
             payload.variantId = variantId;
