@@ -2,6 +2,7 @@ const service = require('./serviceDeclaration');
 const PropertiesReader = require('properties-reader');
 const templateMsgJSON = require('../jsonData/TemplateMsg.json');
 const carouselJSON = require('../jsonData/NBCarousel.json');
+const config = require('../config/config.json');
 var utf8 = require('utf8');
 
 class IntentHandlers {
@@ -15,7 +16,7 @@ class IntentHandlers {
 
     handleShowDealProducts(senderId, result) {
         console.log('Showing Deal Products..');
-        service.getProductsUnderCategory('a148c0b0-9d86-448b-a9e5-0effa2b6499d', senderId, showDealProducts);
+        service.getProductsUnderCategory(config.product-categories.OFFER_PRODUCTS, senderId, showDealProducts);
     }
 }
 
@@ -37,7 +38,7 @@ function populateFbTemplate(response, message) {
             productJSON.title = productName;
             var payload = {};
             payload.id = product.id;
-            payload.action = 'add_to_cart';
+            payload.action = config.postback-actions.ADD_TO_CART;
             var masterVariant = product.masterVariant;
             var variantId = masterVariant.id;
             payload.variantId = variantId;

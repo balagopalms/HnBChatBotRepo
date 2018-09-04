@@ -1,6 +1,7 @@
 const service = require('./serviceDeclaration');
 const handlers = require('./postbackHandler');
 const utf8 = require('utf8');
+const config = require('../config/config.json');
 
 module.exports = (event) => {
     console.log("processPostBack");
@@ -10,7 +11,7 @@ module.exports = (event) => {
         console.log("Action: " + action);
         if(action) {
             switch(action) {
-                case 'add_to_cart':
+                case config.postback-actions.ADD_TO_CART:
                     handlers.handleAddToCart(event.sender.id, payload);
                     break;
                 default:
