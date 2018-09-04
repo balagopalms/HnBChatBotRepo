@@ -38,8 +38,10 @@ function populateFbTemplate(response, message) {
             var payload = {};
             payload.id = product.id;
             payload.action = 'add_to_cart';
-            productJSON.buttons[1].payload = JSON.stringify(payload);
             var masterVariant = product.masterVariant;
+            var variantId = masterVariant.id;
+            payload.variantId = variantId;
+            productJSON.buttons[1].payload = JSON.stringify(payload);
             masterVariant.images.forEach(
                 image => {
                     var imageURL = image.url;

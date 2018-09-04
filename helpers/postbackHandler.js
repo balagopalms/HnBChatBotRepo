@@ -7,17 +7,14 @@ class IntentHandlers {
         var data = {};
         data.productId = payload.id;
         data.senderId = senderId;
-        data.variantId = 1;
+        data.variantId = payload.variantId;
+        data.quantity = 1;
         service.loginUser(data, addToCart);
     }
 }
 
 const addToCart = (response, data) => {
     console.log("addToCart method is called");
-    console.log(response.cart.version);
-    console.log(response.cart.id);
-    data.variantId = 1;
-    data.quantity = 1;
     data.cartId = response.cart.id;
     data.cartVersion = response.cart.version;
     service.addToCart(data, addToCartResHandler);
