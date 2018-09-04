@@ -15,6 +15,22 @@ module.exports = (senderId, result) => {
                 break;
             case config.intents.CATEGORY_CAROUSEL:
                 handlers.handleShowDealProducts(senderId, result);
+                break;
+            case config.intents.NATURAL_BEAUTY:
+                handlers.handleNaturalBeautyProducts(senderId, result);
+                break;
+            case config.intents.FOOD_DRINKS:
+                handlers.handleFoodsDrinksProducts(senderId, result);
+                break;
+            case config.intents.STORE_LOCATOR:
+                handlers.handleStoreLocator(senderId, result);   
+                break;
+            case config.intents.CUSTOMER_CARE:
+                handlers.handleCustomerCare(senderId, result);
+                break;
+            case config.intents.OFFERS_DEALS:
+                handlers.handleOffersAndDeals(senderId, result);
+                break;                                
             default:
                 service.sendTextMessage(senderId, result.fulfillment.speech);
         }

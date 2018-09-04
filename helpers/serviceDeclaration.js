@@ -140,6 +140,10 @@ class Services {
             callBackHandler(response, data);
         });
     }
+    
+    showStoreLocator(senderId) {
+    	console.log('showStoreLocator is called');    	
+    }
 }
 
 module.exports = new Services();

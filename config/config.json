@@ -1,9 +1,9 @@
 
 {
     "auth": {
-        "FACEBOOK_ACCESS_TOKEN": "EAAETHMOICOkBAIu7tEQL8zDfR5JMZAxJwbLDD9iWxh4QUJZCYPOSBDGTcBQiBpNNYxQkYkMejaMtWtxBwEdBe3d56rye0NALe6w3sgQ49y7FtOw5ZAJDoCRUB23tbyFsD1ZAFwXNqR0utxgwCppJ0cp11BPSytBup1j0qht7fUlYM7DKnSLMMIEY6zin3hUZD",
-        "API_AI_TOKEN": "d6727836ebd54822894b04fd2518d18f",
-        "COMMERCETOOL_AUTH": "Bearer fAmDzrQsQ2vt41uV7_M4N1xgrE-d47kF",
+        "FACEBOOK_ACCESS_TOKEN": "EAAJpZCJzwtZAMBAFnOyjEUFWEaRhdKZCObAn1GNCJowmgLOdtUWHZAcSnSTHZAI3SgAHA99aDzU47solxZCzleG37wtBFfk0F1rz707UMSSHheaEd9jiAE17DG1DKhLyzUBYHpvZAa9Di0lUrhPOPTjSO3hxaes7aZARBFLicbBOJ6rA3mX1hJZCQlEp0aZBomdY0ZD",
+        "API_AI_TOKEN": "ec4a634f004248bdb08bd20e0f0a8d4a",
+        "COMMERCETOOL_AUTH": "Bearer 1oh7MOf7ShjLfRleMh0610EOARQxnqrA",
         "CT_USERID": "vivekvr@yahoo.co.in",
         "CT_PASSWORD": "vivek12345",
         "FB_VERIFY_TOKEN": "chatbotverificationhnb"
@@ -15,12 +15,19 @@
     },
     "intents": {
         "PASSWORD_RESET": "PASSWORD_RESET - emailId",
-        "CATEGORY_CAROUSEL": "POPULAR_PRODUCTS"
+        "CATEGORY_CAROUSEL": "POPULAR_PRODUCTS",
+        "NATURAL_BEAUTY": "NATURAL_BEAUTY",
+        "FOOD_DRINKS":"FOOD_DRINKS",
+        "STORE_LOCATOR":"STORE_LOCATOR",
+        "CUSTOMER_CARE":"CUSTOMER_CARE",
+        "OFFERS_DEALS":"OFFERS_DEALS"
     },
     "postback_actions" : {
         "ADD_TO_CART": "add_to_cart"
     },
     "product_categories": {
-        "OFFER_PRODUCTS": "a148c0b0-9d86-448b-a9e5-0effa2b6499d"
+        "OFFER_PRODUCTS": "d2f9a7e8-daca-48d2-b52f-918edd28928b",
+        "NATURAL_BEAUTY_PRODUCTS": "84a9b36c-e38f-4af5-b494-ca4f63d34790",
+        "FOOD_DRINKS":"a148c0b0-9d86-448b-a9e5-0effa2b6499d"
     }
 }
