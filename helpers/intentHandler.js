@@ -1,6 +1,7 @@
 
 const service = require('./serviceDeclaration');
 const handlers = require('./intentHandlers');
+const config = require('../config/config.json');
 
 
 module.exports = (senderId, result) => {
@@ -9,10 +10,10 @@ module.exports = (senderId, result) => {
         console.log("IntentName: " + result.metadata.intentName);
 
         switch( result.metadata.intentName) {
-            case 'PASSWORD_RESET - emailId':
+            case config.intents.PASSWORD_RESET:
                 handlers.handleChangePasswd(senderId, result);
                 break;
-            case 'POPULAR_PRODUCTS':
+            case config.intents.CATEGORY_CAROUSEL:
                 handlers.handleShowDealProducts(senderId, result);
             default:
                 service.sendTextMessage(senderId, result.fulfillment.speech);

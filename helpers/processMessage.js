@@ -1,4 +1,6 @@
-const API_AI_TOKEN = 'd6727836ebd54822894b04fd2518d18f';
+const config = require('../config/config.json');
+
+const API_AI_TOKEN = config.auth.API_AI_TOKEN;
 
 const apiAiClient = require('apiai')(API_AI_TOKEN);
 const intentHandler = require('./intentHandler');
