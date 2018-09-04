@@ -39,7 +39,8 @@ function showCartProducts(response, senderId) {
 };
 
 function populateCartItemFbTemplate(response, message) {
-    response.lineItems.forEach(
+    var counter = 0;
+    response.lineItems.some(
         product=>{
             var productJSON = JSON.parse(JSON.stringify(cartViewJSON)); //clone the object.
             var productName = product.name.en;
@@ -63,6 +64,9 @@ function populateCartItemFbTemplate(response, message) {
                 }
             )
             message.message.attachment.payload.elements.push(productJSON);
+            counter++;
+            console.log("counter: " + counter);
+            return counter == 10;
         }
     );
 }
