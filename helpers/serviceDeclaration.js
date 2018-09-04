@@ -101,7 +101,7 @@ class Services {
             if (res.statusCode != 200) {
                 console.log("Error: "+ err);
                 console.log("ResponseBody: "+ res.statusCode);
-                console.log("ResponseBody: "+ res.body);
+                console.log("ResponseBody: "+ JSON.stringify(res.body));
                 return;
             }
             console.log("got response from CT");

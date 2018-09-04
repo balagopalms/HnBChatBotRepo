@@ -123,12 +123,12 @@ function showCustomerService(senderId) {
 const showDealProducts = (response, senderId) => {
     var message = JSON.parse(JSON.stringify(templateMsgJSON));  //clone the object.
     message.recipient.id = senderId;
-    populateFbTemplate(response, message);
+    populateProductFbTemplate(response, message);
     service.sendTemplateMessage(senderId, message);
     message = {};
 };
 
-function populateFbTemplate(response, message) {
+function populateProductFbTemplate(response, message) {
     response.results.forEach(
         product=>{
             var productJSON = JSON.parse(JSON.stringify(carouselJSON)); //clone the object.
@@ -160,8 +160,6 @@ function populateFbTemplate(response, message) {
             message.message.attachment.payload.elements.push(productJSON);
         }
     );
-    //console.log(JSON.stringify(templateMsgJSON, null, 2));
-    //return message;
 }
 
 module.exports = new IntentHandlers();

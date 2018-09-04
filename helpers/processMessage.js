@@ -10,7 +10,7 @@ module.exports = (event) => {
     console.log("SenderId: " + senderId);
     const message = event.message.text;
     console.log("Message: " + message);
-    const apiaiSession = apiAiClient.textRequest(message, {sessionId: 'fbchatboth&b'});
+    const apiaiSession = apiAiClient.textRequest(message, {sessionId: senderId});
     console.log("Sent request to DialogFlow");
     apiaiSession.on('response', (response) => {
         console.log("Got response from DialogFlow");
