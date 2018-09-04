@@ -16,7 +16,7 @@ class IntentHandlers {
 
     handleShowDealProducts(senderId, result) {
         console.log('Showing Deal Products..');
-        service.getProductsUnderCategory(config.product-categories.OFFER_PRODUCTS, senderId, showDealProducts);
+        service.getProductsUnderCategory(config.product_categories.OFFER_PRODUCTS, senderId, showDealProducts);
     }
 }
 

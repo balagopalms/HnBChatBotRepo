@@ -20,7 +20,7 @@
     "postback_actions" : {
         "ADD_TO_CART": "add_to_cart"
     },
-    "product-categories": {
+    "product_categories": {
         "OFFER_PRODUCTS": "a148c0b0-9d86-448b-a9e5-0effa2b6499d"
     }
 }
