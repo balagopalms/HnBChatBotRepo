@@ -1,0 +1,14 @@
+
+{
+    "auth": {
+        "FACEBOOK_ACCESS_TOKEN": "EAAETHMOICOkBAIu7tEQL8zDfR5JMZAxJwbLDD9iWxh4QUJZCYPOSBDGTcBQiBpNNYxQkYkMejaMtWtxBwEdBe3d56rye0NALe6w3sgQ49y7FtOw5ZAJDoCRUB23tbyFsD1ZAFwXNqR0utxgwCppJ0cp11BPSytBup1j0qht7fUlYM7DKnSLMMIEY6zin3hUZD",
+        "COMMERCETOOL_AUTH": "Bearer fAmDzrQsQ2vt41uV7_M4N1xgrE-d47kF",
+        "CT_USERID": "vivekvr@yahoo.co.in",
+        "CT_PASSWORD": "vivek12345"
+    },
+    "url": {
+        "COMMERCETOOL_BASE_URL": "https://api.sphere.io/hnb-59",
+        "WEBHOOK_URL": "https://radiant-hollows-75895.herokuapp.com",
+        "FACEBOOK_GRAPH": "https://graph.facebook.com/v2.6"
+    }
+}
